@@ -1,0 +1,18 @@
+# Render Blueprint for Unified FireSight AI Deployment
+# Documentation: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: firesight-ai
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: NASA_FIRMS_MAP_KEY
+        sync: false
+      - key: FORCE_DEMO_MODE
+        value: false

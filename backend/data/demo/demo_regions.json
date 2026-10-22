@@ -1,0 +1,82 @@
+[
+  {
+    "id": "similipal_odisha",
+    "name": "Similipal Tiger Reserve & Biosphere",
+    "state": "Odisha",
+    "country": "India",
+    "description": "Dense moist-deciduous sal forest ecosystem in Mayurbhanj district, historically prone to intense pre-monsoon dry season wildfires.",
+    "center": {
+      "latitude": 21.65,
+      "longitude": 86.35
+    },
+    "bbox": {
+      "min_lat": 21.40,
+      "min_lon": 86.10,
+      "max_lat": 21.90,
+      "max_lon": 86.60
+    },
+    "forest_type": "Dense Moist Deciduous & Sal Mixed",
+    "area_sqkm": 2750.0,
+    "is_demo": true
+  },
+  {
+    "id": "bandipur_karnataka",
+    "name": "Bandipur National Park",
+    "state": "Karnataka",
+    "country": "India",
+    "description": "Key tiger reserve in the Western Ghats Nilgiri Biosphere, vulnerable to summer deciduous dry fuel bed fires and bamboo flowering combustion.",
+    "center": {
+      "latitude": 11.66,
+      "longitude": 76.62
+    },
+    "bbox": {
+      "min_lat": 11.50,
+      "min_lon": 76.40,
+      "max_lat": 11.85,
+      "max_lon": 76.85
+    },
+    "forest_type": "Dry Deciduous & Scrub Forest",
+    "area_sqkm": 872.0,
+    "is_demo": true
+  },
+  {
+    "id": "corbett_uttarakhand",
+    "name": "Jim Corbett Tiger Reserve",
+    "state": "Uttarakhand",
+    "country": "India",
+    "description": "Sub-Himalayan Shivalik foothills dominated by sal, haldu, and chir pine needle resin beds with elevated high-wind fire spread risk.",
+    "center": {
+      "latitude": 29.53,
+      "longitude": 78.77
+    },
+    "bbox": {
+      "min_lat": 29.35,
+      "min_lon": 78.60,
+      "max_lat": 29.75,
+      "max_lon": 79.05
+    },
+    "forest_type": "Sub-Himalayan Sal & Pine Belt",
+    "area_sqkm": 1288.0,
+    "is_demo": true
+  },
+  {
+    "id": "gir_gujarat",
+    "name": "Gir National Park & Sanctuary",
+    "state": "Gujarat",
+    "country": "India",
+    "description": "The sole habitat of the Asiatic Lion, comprising dry deciduous teak forests, acacia scrub, and dry grass savanna subject to arid heatwaves.",
+    "center": {
+      "latitude": 21.12,
+      "longitude": 70.82
+    },
+    "bbox": {
+      "min_lat": 20.95,
+      "min_lon": 70.60,
+      "max_lat": 21.30,
+      "max_lon": 71.10
+    },
+    "forest_type": "Dry Deciduous Teak & Thorn Scrub",
+    "area_sqkm": 1412.0,
+    "is_demo": true
+  }
+]

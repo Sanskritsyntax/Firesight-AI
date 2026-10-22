@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  firesight-ai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: firesight-ai:latest
+    container_name: firesight-ai-app
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - HOST=0.0.0.0
+      - NASA_FIRMS_MAP_KEY=${NASA_FIRMS_MAP_KEY:-}
+      - FORCE_DEMO_MODE=${FORCE_DEMO_MODE:-false}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
