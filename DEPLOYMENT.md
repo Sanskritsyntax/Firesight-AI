@@ -16,18 +16,19 @@ FireSight AI is engineered as a unified full-stack application. The **FastAPI ba
 
 ---
 
-## Option 1: Deploying to Vercel (FastAPI Serverless + Vite)
+## Option 1: Deploying to Vercel (Multi-Service Architecture)
 
-FireSight AI includes [`vercel.json`](./vercel.json) and an ASGI serverless adapter [`api/index.py`](./api/index.py).
+FireSight AI is configured for **Vercel Services** via [`vercel.json`](./vercel.json). This allows the frontend (React Vite) and backend (FastAPI) to deploy as two independent services inside a single unified Vercel project sharing the same domain.
+
+* **Frontend Service:** Runs from `frontend/` using the Vite framework preset.
+* **Backend Service:** Runs from `backend/` using the Python runtime (`main:app`).
+* **Rewrites:** Automatically routes `/api/*`, `/docs`, and `/openapi.json` to the backend service, and all client-side routes (`/*`) to the frontend service.
 
 ### Method A: Web Dashboard (1-Click)
 1. Go to **[vercel.com/new](https://vercel.com/new)**.
 2. Select your imported GitHub repository: **`Sanskritsyntax/Firesight-AI`**.
-3. Vercel automatically detects the project configuration via `vercel.json`:
-   - **Framework Preset:** Vite
-   - **Build Command:** `cd frontend && npm install && npm run build`
-   - **Output Directory:** `frontend/dist`
-4. Click **Deploy**. Vercel will build the frontend assets, set up the Python Serverless function at `/api/*`, and generate your live HTTPS URL (e.g., `https://firesight-ai.vercel.app`).
+3. Vercel automatically detects the multi-service configuration via `vercel.json`.
+4. Click **Deploy**. Vercel will build both services in parallel and deploy them under your live domain (e.g., `https://firesight-ai.vercel.app`).
 
 ### Method B: Deploy via Vercel CLI
 ```bash
