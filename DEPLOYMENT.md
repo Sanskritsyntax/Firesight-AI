@@ -8,10 +8,36 @@ FireSight AI is engineered as a unified full-stack application. The **FastAPI ba
 
 | Method | Target Environment | Difficulty | Cost |
 | :--- | :--- | :---: | :---: |
-| **Option 1: Render (Recommended)** | Cloud Web Service (Docker) | Very Easy | **Free** |
-| **Option 2: Railway** | Cloud Container Platform | Very Easy | Free / Usage |
-| **Option 3: Docker & Docker Compose** | Local Machine or VPS (AWS/GCP/Linode) | Easy | Cost of VPS |
-| **Option 4: Direct Production Run** | Local Machine (Single Port 8000) | Immediate | **Free** |
+| **Option 1: Vercel** | Serverless Cloud (FastAPI + Vite) | Very Easy | **Free** |
+| **Option 2: Render (Recommended)** | Cloud Web Service (Docker) | Very Easy | **Free** |
+| **Option 3: Railway** | Cloud Container Platform | Very Easy | Free / Usage |
+| **Option 4: Docker & Docker Compose** | Local Machine or VPS (AWS/GCP/Linode) | Easy | Cost of VPS |
+| **Option 5: Direct Production Run** | Local Machine (Single Port 8000) | Immediate | **Free** |
+
+---
+
+## Option 1: Deploying to Vercel (FastAPI Serverless + Vite)
+
+FireSight AI includes [`vercel.json`](./vercel.json) and an ASGI serverless adapter [`api/index.py`](./api/index.py).
+
+### Method A: Web Dashboard (1-Click)
+1. Go to **[vercel.com/new](https://vercel.com/new)**.
+2. Select your imported GitHub repository: **`Sanskritsyntax/Firesight-AI`**.
+3. Vercel automatically detects the project configuration via `vercel.json`:
+   - **Framework Preset:** Vite
+   - **Build Command:** `cd frontend && npm install && npm run build`
+   - **Output Directory:** `frontend/dist`
+4. Click **Deploy**. Vercel will build the frontend assets, set up the Python Serverless function at `/api/*`, and generate your live HTTPS URL (e.g., `https://firesight-ai.vercel.app`).
+
+### Method B: Deploy via Vercel CLI
+```bash
+# Login to Vercel
+npx vercel login
+
+# Deploy to production
+npx vercel --prod
+```
+
 
 ---
 
